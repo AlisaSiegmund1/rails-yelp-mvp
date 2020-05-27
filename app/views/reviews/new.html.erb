@@ -1,0 +1,12 @@
+<div class="container" style="margin-top: 50px">
+<h1>Create new review</h1>
+  <div style="width: 500px">
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating, collection:%w[0 1 2 3 4 5]%>
+      <%= f.submit "add review", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <button type="button" class="btn btn-outline-primary" style="margin-top: 50px"><%=link_to 'Back to overview', restaurants_path%></button>
+</div>
+
